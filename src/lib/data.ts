@@ -36,10 +36,6 @@ export const heroPanels: HeroPanel[] = [
   },
   {
     id: 2,
-    headline: "It's being built by leaders who understand both people and technology",
-  },
-  {
-    id: 3,
     headline: "Matt O'Donnell",
     subtext: "AI-First HR Leader",
     stats: [
@@ -49,7 +45,7 @@ export const heroPanels: HeroPanel[] = [
     ],
   },
   {
-    id: 4,
+    id: 3,
     headline: "Scroll down to explore",
   },
 ];
@@ -348,7 +344,7 @@ export interface CreativeProject {
   type: 'music' | 'film';
   title: string;
   description: string;
-  embedUrl?: string;
+  coverImage?: string;
   externalUrl: string;
 }
 
@@ -358,7 +354,7 @@ export const creativeProjects: CreativeProject[] = [
     type: 'music',
     title: 'Downtown Country',
     description: 'Where country meets the city',
-    embedUrl: 'https://open.spotify.com/embed/artist/4Njm39n7L77AfzF6GmZrcB',
+    coverImage: '/images/creative/downtown-country.jpg',
     externalUrl: 'https://open.spotify.com/artist/4Njm39n7L77AfzF6GmZrcB',
   },
   {
@@ -366,29 +362,26 @@ export const creativeProjects: CreativeProject[] = [
     type: 'music',
     title: 'Brains on Empty',
     description: 'Late night studio sessions',
-    embedUrl: 'https://open.spotify.com/embed/artist/1qTG1xVXvf0f81NP62RSUf',
+    coverImage: '/images/creative/brains-on-empty.jpg',
     externalUrl: 'https://open.spotify.com/artist/1qTG1xVXvf0f81NP62RSUf',
   },
   {
-    id: 'short-film-1',
+    id: 'killing-villa-roma',
     type: 'film',
-    title: 'Short Film',
-    description: 'Stories told through a different lens',
-    embedUrl: 'https://www.youtube.com/embed/kFBoAR-eo7E',
-    externalUrl: 'https://youtu.be/kFBoAR-eo7E',
-  },
-  {
-    id: 'short-film-2',
-    type: 'film',
-    title: 'Short Film',
-    description: 'Stories told through a different lens',
-    embedUrl: 'https://www.youtube.com/embed/kP95AWTZwJs',
+    title: 'Killing Villa Roma',
+    description: 'A short film',
+    coverImage: '/images/creative/foothills-maileja.jpg',
     externalUrl: 'https://youtu.be/kP95AWTZwJs',
   },
+  {
+    id: 'foothills-maileja',
+    type: 'film',
+    title: 'Foothills of the Maileja',
+    description: 'A short film',
+    coverImage: '/images/creative/killing-villa-roma.jpg',
+    externalUrl: 'https://youtu.be/kFBoAR-eo7E',
+  },
 ];
-
-export const creativeFooter =
-  'Piano, guitar, bass, Logic production | Fantasy football commissioner for 11 seasons (not easy!)';
 
 // ============================================================================
 // CONTACT SECTION
@@ -418,6 +411,5 @@ export const navLinks = [
   { href: '#project', label: 'HR Command Center' },
   { href: '#experience', label: 'Experience' },
   { href: '#about', label: 'About' },
-  { href: '#creative', label: 'Creative' },
   { href: '#contact', label: 'Contact' },
 ];

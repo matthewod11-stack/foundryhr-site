@@ -1,9 +1,74 @@
 'use client';
 
 import { useRef } from 'react';
+import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
-import { creativeProjects, creativeFooter } from '@/lib/data';
-import ProjectCarousel from '@/components/ProjectCarousel';
+import { Music, Film } from 'lucide-react';
+import { creativeProjects } from '@/lib/data';
+import type { CreativeProject } from '@/lib/data';
+
+function CreativeTile({ project, index }: { project: CreativeProject; index: number }) {
+  const hasImage = project.coverImage;
+
+  return (
+    <motion.a
+      href={project.externalUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer"
+      aria-label={`${project.title} - ${project.description}`}
+    >
+      {/* Background - Image or Gradient */}
+      {hasImage ? (
+        <Image
+          src={project.coverImage!}
+          alt={project.title}
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          sizes="(max-width: 640px) 100vw, 50vw"
+        />
+      ) : (
+        <div
+          className={`absolute inset-0 transition-transform duration-500 group-hover:scale-105 ${
+            project.type === 'music'
+              ? 'bg-gradient-to-br from-sage-400 via-sage-500 to-sage-600'
+              : 'bg-gradient-to-br from-warm-400 via-warm-500 to-warm-600'
+          }`}
+        />
+      )}
+
+      {/* Overlay - darkens on hover */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
+
+      {/* Type badge */}
+      <div
+        className={`absolute top-4 left-4 p-2 rounded-lg backdrop-blur-sm ${
+          project.type === 'music'
+            ? 'bg-sage-500/80 text-white'
+            : 'bg-warm-500/80 text-white'
+        }`}
+      >
+        {project.type === 'music' ? (
+          <Music className="w-4 h-4" />
+        ) : (
+          <Film className="w-4 h-4" />
+        )}
+      </div>
+
+      {/* Title and description - slides up on hover */}
+      <div className="absolute inset-x-0 bottom-0 p-5 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+        <h3 className="text-xl font-bold text-white mb-1">{project.title}</h3>
+        <p className="text-sm text-white/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75">
+          {project.description}
+        </p>
+      </div>
+    </motion.a>
+  );
+}
 
 export default function Creative() {
   const ref = useRef(null);
@@ -26,24 +91,12 @@ export default function Creative() {
           </div>
         </motion.div>
 
-        {/* Carousel */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.1 }}
-        >
-          <ProjectCarousel projects={creativeProjects} />
-        </motion.div>
-
-        {/* Footer */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center text-sm text-stone-500 mt-8"
-        >
-          {creativeFooter}
-        </motion.p>
+        {/* 2x2 Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {creativeProjects.map((project, index) => (
+            <CreativeTile key={project.id} project={project} index={index} />
+          ))}
+        </div>
       </div>
     </section>
   );

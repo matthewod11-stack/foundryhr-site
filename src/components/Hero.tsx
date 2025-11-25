@@ -123,27 +123,7 @@ export default function Hero() {
           <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-warm-300/20 blur-3xl pointer-events-none" />
         </div>
 
-        {/* Panel 2: Perspective */}
-        <div className="flex-shrink-0 w-screen h-screen snap-start flex items-center justify-center gradient-subtle relative">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl px-8 text-center"
-          >
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-stone-800 leading-tight">
-              That perspective shapes{' '}
-              <span className="text-gradient">the companies I advise and the tools I build.</span>
-            </h2>
-          </motion.div>
-
-          {/* Decorative elements */}
-          <div className="absolute top-1/3 right-10 w-2 h-2 rounded-full bg-sage-400" />
-          <div className="absolute bottom-1/4 left-20 w-3 h-3 rounded-full bg-warm-400" />
-        </div>
-
-        {/* Panel 3: Profile + Stats */}
+        {/* Panel 2: Profile + Stats */}
         <div
           ref={statsRef}
           className="flex-shrink-0 w-screen h-screen snap-start flex items-center justify-center gradient-subtle relative overflow-hidden"
@@ -192,7 +172,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="flex flex-wrap justify-center gap-8 sm:gap-16"
             >
-              {heroPanels[2].stats?.map((stat) => (
+              {heroPanels[1].stats?.map((stat) => (
                 <StatCounter
                   key={stat.label}
                   value={stat.value}
@@ -263,7 +243,7 @@ export default function Hero() {
           hasScrolledPastHero ? 'opacity-0 pointer-events-none' : 'opacity-100'
         }`}
       >
-        {[0, 1, 2, 3].map((index) => (
+        {[0, 1, 2].map((index) => (
           <button
             key={index}
             onClick={() => scrollToPanel(index)}
