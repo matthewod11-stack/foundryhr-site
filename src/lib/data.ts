@@ -388,10 +388,11 @@ export const creativeProjects: CreativeProject[] = [
 // ============================================================================
 
 export const contactInfo = {
-  email: 'matthew@foundrhy.com',
+  email: 'matthew@foundryhr.com',
   location: 'San Francisco, CA',
   linkedin: 'https://linkedin.com/in/mattod88',
   github: 'https://github.com/matthewod11-stack',
+  twitter: 'https://x.com/Matthewod11',
   foundryhr: 'https://foundryhr.com',
 };
 
