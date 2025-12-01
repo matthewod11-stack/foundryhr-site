@@ -2,7 +2,7 @@
 
 import { useRef, useEffect, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Github, ExternalLink, Cpu, Play, Pause } from 'lucide-react';
+import { ExternalLink, Cpu, Play, Pause } from 'lucide-react';
 import { projectStory } from '@/lib/data';
 
 export default function Project() {
@@ -122,16 +122,17 @@ export default function Project() {
                   </span>
                 </li>
               </ul>
-              <a
-                href={projectStory.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-stone-900 text-white rounded-lg font-medium hover:bg-stone-800 transition-colors text-sm"
-              >
-                <Github className="w-4 h-4" />
-                View on GitHub
-                <ExternalLink className="w-3 h-3" />
-              </a>
+              <div className="flex justify-center">
+                <a
+                  href="https://hrcommandcenter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-stone-900 text-white rounded-lg font-medium hover:bg-stone-800 transition-colors text-sm"
+                >
+                  Learn More
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
             </div>
           </motion.div>
 

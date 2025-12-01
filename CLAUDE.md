@@ -207,6 +207,9 @@ npm run lint     # Run ESLint
 
 1. **Filesystem Server** - Access project files and cross-reference with other projects
 2. **GitHub Server** - Create PRs, manage branches for this worktree
+3. **Puppeteer Server** - Take screenshots of deployed site, UI testing
+   - Useful for visual regression and verifying responsive layouts
+   - Setup: `claude mcp add --transport stdio puppeteer -- npx -y @modelcontextprotocol/server-puppeteer`
 
 ### Project-Specific MCP Usage Notes
 - **Most useful:** Filesystem for accessing `~/claude-docs/` reference materials

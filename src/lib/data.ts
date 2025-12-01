@@ -91,20 +91,20 @@ export const services: Service[] = [
     icon: Users,
     title: 'Technical Recruiting Strategy',
     shortDescription:
-      "Build hiring pipelines that attract and assess top engineering talent. I know what engineers look for because I work alongside them.",
+      "The old way of scaling teams is dead. When AI handles execution, you're hiring for taste, judgment, and systems thinking—not roles.",
     challenge:
-      "You're competing for the same engineers as Google, Meta, and well-funded startups. Generic job posts and recruiter spam don't cut it. You need someone who understands what engineers actually care about.",
+      "I've built the standard approaches. I've experimented. This is where I'm landing: execution isn't the bottleneck anymore. When AI tools can move from idea to implementation in minutes, what matters is taste, judgment, and the ability to see across domains. You're not hiring for roles—you're hiring for breadth and depth, systems thinking, and learning velocity. Different teams have different needs, and I adapt the approach accordingly.",
     approach: [
-      'Design hiring processes that respect engineers\' time and intelligence',
-      'Build employer brand content that resonates with technical candidates',
-      'Create technical assessment frameworks that actually predict success',
-      'Train hiring managers on effective interviewing techniques',
+      'Identify candidates with broad cross-functional experience and deep expertise in something AI can\'t replicate: judgment and strategic thinking',
+      'Build small, fluid teams where everyone works collaboratively, breaking down silos between departments',
+      'Assess for taste, vision, and context—the deeply human capabilities that AI can\'t solve',
+      'Design hiring processes that recognize roles as overlapping areas of expertise with different depths, not separate departments',
     ],
     results: [
-      'Reduce time-to-hire by 40%+',
-      'Improve offer acceptance rates',
-      'Build a pipeline of passive candidates',
-      'Create a repeatable, scalable hiring process',
+      'Build lean teams where people working across functions outperform larger groups of specialists coordinating handoffs',
+      'Hire for the capabilities that matter: vision, judgment, and systems thinking',
+      'Create fluid boundaries that let AI handle execution while your team focuses on what makes it valuable',
+      'Adapt the approach to each team\'s unique needs—there\'s no one-size-fits-all',
     ],
   },
   {
@@ -214,7 +214,7 @@ export const techStack = [
 export const projectStory = {
   headline: 'From zero to production in 3 months',
   description:
-    "I didn't learn to code the traditional way. I learned to leverage AI tools (Claude Code, Cursor, Bolt.new) by diving into docs, reading papers, and relentless experimentation. From vibe coding to prompt engineering to shipping production software.",
+    "I didn't learn to code the traditional way. I learned to leverage AI tools by diving into docs, reading papers, and relentless experimentation. From prototype to production software.",
   githubUrl: 'https://github.com/matthewod11-stack/HRSkills',
   githubHandle: 'matthewod11-stack/HRSkills',
 };
@@ -308,7 +308,7 @@ export const experiencePillars = [
   {
     icon: Code,
     title: 'Technical Credibility',
-    description: 'I speak engineer. I build software. I get it.',
+    description: "15 years of building technical teams and supporting technical leaders has rubbed off",
   },
   {
     icon: TrendingUp,
@@ -329,8 +329,8 @@ export const experiencePillars = [
 export const aboutContent = {
   paragraphs: [
     "I've spent 15+ years building people functions at technical companies—from Web3 startups to hypergrowth scale-ups. I'm usually the first HR hire, which means there's no playbook, no existing systems, and a lot of ambiguity to navigate.",
-    "What makes my approach different: I'm not just an HR person who uses AI tools. I've built production software. I understand system architecture, API design, and what makes engineers tick. When I talk about \"AI-first HR,\" I mean I've actually built it.",
-    "Outside of work, I make music (Downtown Country, Brains on Empty), direct short films, and somehow manage a 14-person fantasy football league that's been running for 11 seasons.",
+    "Working alongside highly technical teams and leaders has been inspiring—seeing how they build and solve problems pushed me to start building on my own. I've learned to leverage AI tools to create production software, understanding system architecture and what makes engineers tick. When I talk about \"AI-first HR,\" it comes from actually building it.",
+    "Outside of work, I'm happily married with one toddler. I also make music (Downtown Country, Brains on Empty), direct short films, and somehow manage a 14-person fantasy football league that's been running for 11 seasons.",
   ],
   credentials: 'MA in Organizational Psychology · SHRM-CP Certified',
 };
@@ -355,7 +355,7 @@ export const creativeProjects: CreativeProject[] = [
     title: 'Downtown Country',
     description: 'Where country meets the city',
     coverImage: '/images/creative/downtown-country.jpg',
-    externalUrl: 'https://open.spotify.com/artist/4Njm39n7L77AfzF6GmZrcB',
+    externalUrl: 'https://open.spotify.com/album/7jtRI1wEqthRdtyXTxO5zE',
   },
   {
     id: 'brains-on-empty',
@@ -388,11 +388,10 @@ export const creativeProjects: CreativeProject[] = [
 // ============================================================================
 
 export const contactInfo = {
-  email: 'matthew.od11@gmail.com',
-  phone: '631-805-6376',
+  email: 'matthew@foundrhy.com',
   location: 'San Francisco, CA',
   linkedin: 'https://linkedin.com/in/mattod88',
-  github: 'https://github.com/HRSkills',
+  github: 'https://github.com/matthewod11-stack',
   foundryhr: 'https://foundryhr.com',
 };
 

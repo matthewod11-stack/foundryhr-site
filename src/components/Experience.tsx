@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Building2, ChevronRight } from 'lucide-react';
 import { jobs, earlierCareer, experiencePillars } from '@/lib/data';
@@ -11,15 +11,20 @@ export default function Experience() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const [selectedJob, setSelectedJob] = useState<Job | null>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <>
-      <section id="experience" ref={ref} className="py-24 bg-stone-50">
+      <section id="experience" ref={ref} className="py-24 bg-stone-50" suppressHydrationWarning>
         <div className="max-w-6xl mx-auto px-6">
           {/* Section header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            animate={mounted && isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6 }}
             className="max-w-2xl mb-16"
           >
@@ -42,7 +47,7 @@ export default function Experience() {
           {/* Key differentiators */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            animate={mounted && isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="grid sm:grid-cols-3 gap-6 mb-16"
           >
@@ -88,7 +93,7 @@ export default function Experience() {
                 <motion.div
                   key={job.id}
                   initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  animate={mounted && isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
                   className="relative"
                 >
@@ -143,7 +148,7 @@ export default function Experience() {
           {/* Earlier career */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            animate={mounted && isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.6 }}
             className="bg-stone-100 rounded-xl p-6"
           >
