@@ -8,7 +8,7 @@ const contactLinks = [
   {
     icon: Mail,
     label: 'Email',
-    href: 'mailto:matthew@foundrhy.com',
+    href: 'mailto:matthew@foundryhr.com',
   },
   {
     icon: Linkedin,
