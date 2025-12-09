@@ -145,17 +145,6 @@ export default function Experience() {
             </div>
           </div>
 
-          {/* Credentials */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={mounted && isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-center"
-          >
-            <p className="text-sm text-stone-500">
-              MA in Organizational Psychology · SHRM-CP Certified
-            </p>
-          </motion.div>
         </div>
       </section>
 
