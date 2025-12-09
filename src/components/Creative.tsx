@@ -19,7 +19,7 @@ function CreativeTile({ project, index }: { project: CreativeProject; index: num
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer"
+      className="group relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer"
       aria-label={`${project.title} - ${project.description}`}
     >
       {/* Background - Image or Gradient */}
@@ -29,7 +29,7 @@ function CreativeTile({ project, index }: { project: CreativeProject; index: num
           alt={project.title}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"
-          sizes="(max-width: 640px) 100vw, 50vw"
+          sizes="(max-width: 640px) 50vw, 25vw"
         />
       ) : (
         <div
@@ -46,23 +46,23 @@ function CreativeTile({ project, index }: { project: CreativeProject; index: num
 
       {/* Type badge */}
       <div
-        className={`absolute top-4 left-4 p-2 rounded-lg backdrop-blur-sm ${
+        className={`absolute top-2 left-2 sm:top-3 sm:left-3 p-1.5 sm:p-2 rounded-md sm:rounded-lg backdrop-blur-sm ${
           project.type === 'music'
             ? 'bg-sage-500/80 text-white'
             : 'bg-warm-500/80 text-white'
         }`}
       >
         {project.type === 'music' ? (
-          <Music className="w-4 h-4" />
+          <Music className="w-3 h-3 sm:w-4 sm:h-4" />
         ) : (
-          <Film className="w-4 h-4" />
+          <Film className="w-3 h-3 sm:w-4 sm:h-4" />
         )}
       </div>
 
       {/* Title and description - slides up on hover */}
-      <div className="absolute inset-x-0 bottom-0 p-5 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-        <h3 className="text-xl font-bold text-white mb-1">{project.title}</h3>
-        <p className="text-sm text-white/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75">
+      <div className="absolute inset-x-0 bottom-0 p-2 sm:p-3 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+        <h3 className="text-sm sm:text-base font-bold text-white mb-0.5">{project.title}</h3>
+        <p className="text-xs text-white/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75 line-clamp-2">
           {project.description}
         </p>
       </div>
@@ -76,7 +76,7 @@ export default function Creative() {
 
   return (
     <section id="creative" ref={ref} className="py-24 bg-stone-100">
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="max-w-5xl mx-auto px-6">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -91,8 +91,8 @@ export default function Creative() {
           </div>
         </motion.div>
 
-        {/* 2x2 Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {/* 4-column Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
           {creativeProjects.map((project, index) => (
             <CreativeTile key={project.id} project={project} index={index} />
           ))}
