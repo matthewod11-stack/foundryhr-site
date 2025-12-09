@@ -328,9 +328,9 @@ export const experiencePillars = [
 
 export const aboutContent = {
   paragraphs: [
-    "I've spent 15+ years building people functions at technical companies—from Web3 startups to hypergrowth scale-ups. I'm usually the first HR hire, which means there's no playbook, no existing systems, and a lot of ambiguity to navigate.",
-    "Working alongside highly technical teams and leaders has been inspiring—seeing how they build and solve problems pushed me to start building on my own. I've learned to leverage AI tools to create production software, understanding system architecture and what makes engineers tick. When I talk about \"AI-first HR,\" it comes from actually building it.",
-    "Outside of work, I'm happily married with one toddler. I also make music (Downtown Country, Brains on Empty), direct short films, and somehow manage a 14-person fantasy football league that's been running for 11 seasons.",
+    "I've spent 15+ years building people functions at technical and innovative companies. I'm usually the first HR hire, which means there's no playbook, no systems, no tools...",
+    "Working alongside highly technical teams and leaders has been inspiring—seeing how they build and solve problems pushed me to start building on my own.  When I talk about \"AI-first HR,\" it comes from actually building it.",
+    "Happily married with a toddler. I make music and movies, and run a 14-person fantasy football league.",
   ],
   credentials: 'MA in Organizational Psychology · SHRM-CP Certified',
 };

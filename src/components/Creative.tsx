@@ -86,7 +86,7 @@ export default function Creative() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-stone-200/50 rounded-full mb-6">
             <span className="text-sm text-stone-500">
-              What I make when I&apos;m not building teams and tools
+              When I&apos;m not building teams and tools
             </span>
           </div>
         </motion.div>
