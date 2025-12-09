@@ -445,6 +445,7 @@ export const contactInfo = {
   github: 'https://github.com/matthewod11-stack',
   twitter: 'https://x.com/Matthewod11',
   foundryhr: 'https://foundryhr.com',
+  calendly: 'https://calendly.com/matthew-foundryhr/30min',
 };
 
 export const contactCTA = {

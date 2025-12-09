@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Linkedin, Github, Mail } from 'lucide-react';
+import { Linkedin, Github, Mail, Calendar } from 'lucide-react';
 import { contactInfo } from '@/lib/data';
 
 function XIcon({ className }: { className?: string }) {
@@ -18,6 +18,11 @@ function XIcon({ className }: { className?: string }) {
 }
 
 const socialLinks = [
+  {
+    href: contactInfo.calendly,
+    label: 'Book a Call',
+    icon: Calendar,
+  },
   {
     href: contactInfo.linkedin,
     label: 'LinkedIn',

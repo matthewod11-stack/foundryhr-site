@@ -2,7 +2,7 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
-import { Mail, Linkedin, Github } from 'lucide-react';
+import { Mail, Linkedin, Github, Calendar } from 'lucide-react';
 
 function XIcon({ className }: { className?: string }) {
   return (
@@ -18,6 +18,11 @@ function XIcon({ className }: { className?: string }) {
 }
 
 const contactLinks = [
+  {
+    icon: Calendar,
+    label: 'Book a Call',
+    href: 'https://calendly.com/matthew-foundryhr/30min',
+  },
   {
     icon: Mail,
     label: 'Email',
