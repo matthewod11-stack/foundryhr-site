@@ -451,8 +451,8 @@ export const contactCTA = {
 
 export const navLinks = [
   { href: '#consulting', label: 'Consulting' },
-  { href: '#project', label: 'HR Command Center' },
   { href: '#experience', label: 'Experience' },
+  { href: '#project', label: 'HR Command Center' },
   { href: '#about', label: 'About' },
   { href: '#contact', label: 'Contact' },
 ];
