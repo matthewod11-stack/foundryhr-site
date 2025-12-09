@@ -3,8 +3,8 @@
 import { useState, useRef } from 'react';
 import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
-import { CheckCircle, ArrowRight, ChevronRight } from 'lucide-react';
-import { services, consultingBenefits } from '@/lib/data';
+import { ChevronRight } from 'lucide-react';
+import { services } from '@/lib/data';
 import ServiceModal from '@/components/ServiceModal';
 import type { Service } from '@/lib/data';
 
@@ -55,7 +55,7 @@ export default function Consulting() {
           </motion.div>
 
           {/* Services grid - now clickable */}
-          <div className="grid md:grid-cols-2 gap-6 mb-16">
+          <div className="grid md:grid-cols-2 gap-6">
             {services.map((service, index) => (
               <motion.button
                 key={service.id}
@@ -85,60 +85,6 @@ export default function Consulting() {
               </motion.button>
             ))}
           </div>
-
-          {/* Benefits and CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="flex flex-col lg:flex-row gap-12 items-center"
-          >
-            {/* Benefits list */}
-            <div className="flex-1">
-              <h3 className="text-xl font-semibold text-stone-800 mb-6">
-                What you get:
-              </h3>
-              <ul className="space-y-4">
-                {consultingBenefits.map((benefit, index) => (
-                  <motion.li
-                    key={benefit}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={isInView ? { opacity: 1, x: 0 } : {}}
-                    transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
-                    className="flex items-center gap-3"
-                  >
-                    <CheckCircle className="w-5 h-5 text-sage-500 flex-shrink-0" />
-                    <span className="text-stone-700">{benefit}</span>
-                  </motion.li>
-                ))}
-              </ul>
-            </div>
-
-            {/* CTA Card */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.6, delay: 0.7 }}
-              className="flex-1 max-w-md w-full"
-            >
-              <div className="p-8 bg-gradient-to-br from-warm-600 to-warm-700 rounded-2xl text-white shadow-xl shadow-warm-600/30">
-                <h3 className="text-2xl font-bold mb-3">
-                  Ready to modernize your people ops?
-                </h3>
-                <p className="text-warm-100 mb-6">
-                  Let&apos;s talk about where you are, where you&apos;re going, and how
-                  to build the systems to get you there.
-                </p>
-                <a
-                  href="#contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-white text-warm-700 rounded-lg font-medium hover:bg-warm-50 transition-colors"
-                >
-                  Get in Touch
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
-            </motion.div>
-          </motion.div>
         </div>
       </section>
 
