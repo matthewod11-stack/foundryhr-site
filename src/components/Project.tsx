@@ -3,7 +3,6 @@
 import { useRef, useEffect, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ExternalLink, Cpu, Play, Pause } from 'lucide-react';
-import { projectStory } from '@/lib/data';
 
 export default function Project() {
   const ref = useRef(null);
@@ -77,10 +76,9 @@ export default function Project() {
               HR Command Center
             </h2>
             <p className="text-lg text-stone-300">
-              I&apos;m not just someone who uses AI tools in HR.{' '}
+              I&apos;m not just using AI in HR,{' '}
               <span className="text-warm-400 font-medium">
-                I&apos;m building what I think the next generation of HR tech should
-                look like.
+                I&apos;m building the next generation of HR tech.
               </span>
             </p>
           </motion.div>

@@ -41,7 +41,6 @@ export const heroPanels: HeroPanel[] = [
     stats: [
       { value: 15, suffix: '+', label: 'Years scaling technical orgs' },
       { value: 25, suffix: '', label: 'Custom AI skills built' },
-      { value: 3, suffix: '', label: 'Months to ship full-stack platform' },
     ],
   },
   {
@@ -210,14 +209,6 @@ export const techStack = [
   'OpenAI',
   'Gemini',
 ];
-
-export const projectStory = {
-  headline: 'From zero to production in 3 months',
-  description:
-    "I didn't learn to code the traditional way. I learned to leverage AI tools by diving into docs, reading papers, and relentless experimentation. From prototype to production software.",
-  githubUrl: 'https://github.com/matthewod11-stack/HRSkills',
-  githubHandle: 'matthewod11-stack/HRSkills',
-};
 
 // ============================================================================
 // EXPERIENCE SECTION
