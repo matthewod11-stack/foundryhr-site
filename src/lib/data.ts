@@ -296,12 +296,63 @@ export const jobs: Job[] = [
     tags: ['Hypergrowth', 'PropTech', '6x Scale'],
     url: 'https://sundae.com',
   },
-];
-
-export const earlierCareer = [
-  { company: 'Accenture / ?What If! Innovation', role: 'People Business Partner' },
-  { company: 'Dentsu Aegis Network', role: 'Business Recruiting Manager' },
-  { company: 'Vecna Robotics', role: 'Technical Recruiting Manager' },
+  {
+    id: 'whatif',
+    company: '?What If! Innovation',
+    role: 'NY People Lead',
+    period: 'Mar 2017 – Aug 2020',
+    location: 'New York, NY',
+    shortDescription:
+      'Led HR and recruiting for U.S. office at this Accenture-owned innovation consultancy.',
+    fullDescription:
+      '?What If! Innovation is a global innovation consulting firm (acquired by Accenture). I led the full People function for the U.S. office, partnering closely with leadership on talent strategy, employee relations, and organizational design during a period of integration with the broader Accenture agency network.',
+    highlights: [
+      'Led HR and recruiting for U.S. office; managed EA team, 1 recruiter, and 1 HRBP',
+      'Developed case study interview process adopted across Accenture agency network',
+      'Launched onboarding and shadowing program to improve new hire ramp-up',
+      'Designed continuous performance feedback model based on radical candor principles',
+      'Oversaw employee relations and performance cases in coordination with legal',
+    ],
+    tags: ['Innovation', 'Consulting', 'Accenture'],
+    url: 'https://www.accenture.com/us-en/services/song/innovation-consulting',
+  },
+  {
+    id: 'dentsu',
+    company: 'Dentsu Aegis Network',
+    role: 'Corporate Recruiting Manager',
+    period: 'Sep 2015 – Mar 2017',
+    location: 'New York, NY',
+    shortDescription:
+      'Drove cross-functional recruiting for 50+ internal agencies across the U.S.',
+    fullDescription:
+      'Dentsu Aegis Network is one of the largest global advertising and media holding companies. I led corporate recruiting efforts spanning creative, media, technology, and business functions across their portfolio of 50+ agencies in the United States.',
+    highlights: [
+      'Drove cross-functional recruiting for 50+ internal agencies across the U.S.',
+      'Partnered with C-suite on executive searches for key business functions',
+      'Standardized hiring practices and launched inclusive manager training programs',
+      'Championed DEI sourcing strategies, improving underrepresented candidate conversion',
+    ],
+    tags: ['Advertising', 'Media', 'DEI', 'Executive Search'],
+    url: 'https://www.dentsu.com',
+  },
+  {
+    id: 'vecna',
+    company: 'Vecna Robotics',
+    role: 'Technical Recruiting Manager',
+    period: 'Jan 2012 – Aug 2015',
+    location: 'Boston, MA',
+    shortDescription:
+      'Designed and scaled technical recruiting function for software and robotics roles.',
+    fullDescription:
+      'Vecna Robotics builds autonomous mobile robots for material handling and logistics. I joined early to build and scale the technical recruiting function, focusing on software engineers, robotics engineers, and research scientists in the Boston tech ecosystem.',
+    highlights: [
+      'Designed and scaled technical recruiting function for software and robotics roles',
+      'Managed university recruiting at MIT and top-tier engineering programs',
+      'Led onboarding redesign and tracked hiring efficiency and satisfaction metrics',
+    ],
+    tags: ['Robotics', 'Technical Recruiting', 'Startup'],
+    url: 'https://www.vecnarobotics.com',
+  },
 ];
 
 export const experiencePillars = [

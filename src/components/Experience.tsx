@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Building2, ChevronRight } from 'lucide-react';
-import { jobs, earlierCareer, experiencePillars } from '@/lib/data';
+import { jobs, experiencePillars } from '@/lib/data';
 import JobModal from '@/components/JobModal';
 import type { Job } from '@/lib/data';
 
@@ -145,29 +145,14 @@ export default function Experience() {
             </div>
           </div>
 
-          {/* Earlier career */}
+          {/* Credentials */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={mounted && isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="bg-stone-100 rounded-xl p-6"
+            className="text-center"
           >
-            <h4 className="text-sm font-medium text-stone-500 uppercase tracking-wide mb-4">
-              Earlier Career (2012–2020)
-            </h4>
-            <div className="flex flex-wrap gap-4">
-              {earlierCareer.map((exp) => (
-                <div
-                  key={exp.company}
-                  className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg border border-stone-200"
-                >
-                  <span className="font-medium text-stone-700">{exp.company}</span>
-                  <span className="text-stone-400">·</span>
-                  <span className="text-sm text-stone-500">{exp.role}</span>
-                </div>
-              ))}
-            </div>
-            <p className="text-sm text-stone-500 mt-4">
+            <p className="text-sm text-stone-500">
               MA in Organizational Psychology · SHRM-CP Certified
             </p>
           </motion.div>
