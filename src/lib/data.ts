@@ -370,8 +370,8 @@ export const experiencePillars = [
 
 export const aboutContent = {
   paragraphs: [
-    "I've spent 15+ years building people functions at technical and innovative companies. I'm usually the first HR hire, which means there's no playbook, no systems, no tools...",
-    "Working alongside highly technical teams and leaders has been inspiring—seeing how they build and solve problems pushed me to start building on my own.  When I talk about \"AI-first HR,\" it comes from actually building it.",
+    "I've spent 15+ years building people functions at technical companies, usually as the first HR hire. No playbook, no systems, no tools.",
+    "Working with technical teams pushed me to start building myself. When I say \"AI-first HR,\" I mean I actually build it.",
     "Happily married with a toddler. I make music and movies, and run a 14-person fantasy football league.",
   ],
   credentials: 'MA in Organizational Psychology · SHRM-CP Certified',
